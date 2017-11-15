@@ -1,0 +1,35 @@
+===========================
+        IDENTIFIERS
+===========================
+\d im looking for a number
+\D im looking for anything but a number
+\s im looking for a space
+\S im looking for anything but a space
+\w im looking for a character
+\W im looking for anything but a character
+.x im looking for the letter x...eg when looking for a, r'.a'
+\b im looking for a whitespace around words
+\. a period- can be used as a wildcard(character used as a placeholder of anything else
+\ is an escape character
+
+===========================
+        MODIFIERS
+===========================
+they describe identifiers even more
+{x,y} im expecting x to y digits or {x} expecting x digits or characters eg \d{1,3} looking for 1 to 3 digits
+
+'\d{4,} looking for a number with 4 and above digits
++ match 1 or more
+? match 0 or 1
+* match 0 or more
+$ match the end of a string
+^ match the beginning of a string.
+eg ^blog... dont match anything before this word i.e, this word should be the first in a sentence
+eg blog$... dont match anything after this word i,e, should be last
+| matches either or eg \d{1,3} | \w{5,10} looking for a digit 1 to 3 in length or characters 5 to 10 in length
+[] gives range...eg [A-Z] looks for anything with capital letters
+[A-Za-z] looks for anything capital or small letters
+[A-Z][a-z]* looks for anything starting with caps then followed by 0 or more occurrences of a small letter a to z
+[h-m]at looking for words with the first letter in the range of h-m and ends with at
+re.match() checks for a match at the beginning of a string
+re.search() checks for a match throughout a string
