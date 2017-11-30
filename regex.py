@@ -45,3 +45,10 @@ for line in text:
     line=line.rstrip()# to remove the newline character(\n)
     if re.search(r'[A-Z]{8,}',line):
         print(line)
+
+s='127.0.0.1/blog 748596/blog/hello'
+print(re.findall(r'blog[^\s]',s)) # if the carrat sign is included in the range brackets,
+# the regex looks for anything apart from what is specified in the regex
+# when used outside the range, it means 'match the beggining of a line'
+#eg, only give me words that dont start with capital letters.
+#^[^A_Z]

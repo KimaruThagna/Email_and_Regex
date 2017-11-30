@@ -26,6 +26,13 @@ $ match the end of a string
 ^ match the beginning of a string.
 eg ^blog... dont match anything before this word i.e, this word should be the first in a sentence
 eg blog$... dont match anything after this word i,e, should be last
+when used in a range, it means give me everything but whatever is in the range bracket
+eg, give me words in the form b[^a']....word starting with b and followed by any other letter
+but not a
+
+When used outside the range, it means 'match the beggining of a line'
+eg, only give me words that dont start with capital letters.
+^[^A-Z]
 | matches either or eg \d{1,3} | \w{5,10} looking for a digit 1 to 3 in length or characters 5 to 10 in length
 [] gives range...eg [A-Z] looks for anything with capital letters
 [A-Za-z] looks for anything capital or small letters
