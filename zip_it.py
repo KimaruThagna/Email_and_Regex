@@ -4,7 +4,8 @@ def zipper(output_name,dir_name): # the zip function
     shutil.make_archive(output_name,'zip',dir_name)
     print('Zipping the directory'+str(dir_name))
 
-zipper('myZip',os.path.dirname(os.path.abspath(__file__)))
+zipper('myZip',os.path.dirname(os.path.abspath(__file__))) # this gets the name of the directory in which the current file lives
+#to get the directory above this directory, os.path.dirname(os.path.dirname(os.path.abspath(__file__))
 # call function and give it required params.
 #This example uses the current directory.
 #One can use tkinter to select any other directory.
